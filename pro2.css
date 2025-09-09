@@ -1,0 +1,35 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    /* background-color: aqua; */
+    height:100vh;
+}
+
+.c1{
+    width: 300px;
+    height:200px;
+    background-color: rgb(53, 50, 50);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+
+}
+.btn{
+ padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  /* font-size: 10px; */
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
