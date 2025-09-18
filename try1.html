@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Fixed demo</title>
+</head>
+<body>
+  <h2>Leave a comment (fixed)</h2>
+  <form id="cmtForm">
+    <input id="name" placeholder="name"><br><br>
+    <textarea id="comment" placeholder="your comment"></textarea><br><br>
+    <button type="submit">Post</button>
+  </form>
+
+  <h3>Comments</h3>
+  <div id="comments"></div>
+
+  <script>
+    const form = document.getElementById('cmtForm');
+    const comments = document.getElementById('comments');
+
+    function escapeHtml(str) {
+      return str
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#39;');
+    }
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const n = escapeHtml(document.getElementById('name').value);
+      const c = escapeHtml(document.getElementById('comment').value);
+      // SAFE: create elements and set textContent (no HTML parsing)
+      const wrapper = document.createElement('div');
+      wrapper.className = 'comment';
+      const strong = document.createElement('strong');
+      strong.textContent = n;
+      wrapper.appendChild(strong);
+      wrapper.appendChild(document.createTextNode(': ' + c));
+      comments.appendChild(wrapper);
+      form.reset();
+    });
+  </script>
+</body>
+</html>

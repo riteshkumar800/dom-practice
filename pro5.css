@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height:100vh;
+        background-color: rgb(38, 37, 37);
+
+
+}
+
+div{
+
+    background: url("https://cdn4.iconfinder.com/data/icons/set-1/32/__1-1024.png");
+    
+    height:100px;
+    width: 100px; 
+    background-color: rgb(38, 37, 37);
+    position: absolute;
+    pointer-events:none;
+    background-size:cover;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: animate 6s linear;
+
+
+    /* background: url("https://cdn4.iconfinder.com/data/icons/set-1/32/__1-1024.png"); */
+    
+
+
+}
+
+@keyframes animate {
+0% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    filter: hue-totate(0);
+}    
+100% {
+    transform: translate(-50%, -5000%);
+    opacity: 0;
+    filter: hue-rotate(720deg);
+}
+
+
+
+}
+
+/* img{
+    background-color: rgb(21, 19, 19);
+} */

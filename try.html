@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Vulnerable demo</title>
+</head>
+<body>
+  <h2>Leave a comment</h2>
+  <form id="cmtForm">
+    <input id="name" placeholder="name"><br><br>
+    <textarea id="comment" placeholder="your comment"></textarea><br><br>
+    <button type="submit">Post</button>
+  </form>
+
+  <h3>Comments</h3>
+  <div id="comments"></div>
+
+  <script>
+    const form = document.getElementById('cmtForm');
+    const comments = document.getElementById('comments');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const n = document.getElementById('name').value;
+      const c = document.getElementById('comment').value;
+      // <-- UNSAFE: inserting raw HTML from user input
+      comments.innerHTML += `<div class="comment"><strong>${n}</strong>: ${c}</div>`;
+      form.reset();
+    });
+  </script>
+</body>
+</html>

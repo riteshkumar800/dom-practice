@@ -1,0 +1,112 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+.use {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 5px;
+    /* outline: none; */
+    background-color: rgb(46, 40, 40);
+    color: rgb(145, 141, 141);
+}
+
+.use h3 {
+    flex:1;
+    font-size: 16px;
+    font-weight: 600;
+    color: #e0e0e0;
+    margin: 0;
+}
+
+.done{
+    padding:6px 10px;
+    border:none;
+    border-radius: 5px;
+    background-color: green;
+    color:white;
+    cursor: pointer;
+
+}
+
+.del{
+    padding: 6px 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: crimson;
+    color: white;
+    cursor: pointer;
+}
+.del:hover{
+    opacity: 0.5;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    background-color: azure;
+    justify-content: center;
+    align-items: center;
+}
+
+.c3{  
+    margin:5px;
+    padding: 10px;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    width:180px;
+    height:10px;
+    background-color: rgb(71, 37, 37);
+}
+.c1{
+    display:flex;
+    gap:5px;
+    width:100%;
+}
+.c1 input{
+    flex:1;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: rgb(46, 40, 40);
+    color: rgb(145, 141, 141);
+}
+.c1 .btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: teal;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.c1 .btn:hover {
+    background-color: darkcyan;
+}
+.c2 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.c{
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+    box-shadow: 0 0 5px silver; 
+    align-items: center;
+    height: 400px;
+    width:400px;
+    background-color: rgb(97, 94, 94);
+    padding: 50px;
+}

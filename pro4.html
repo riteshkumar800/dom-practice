@@ -1,0 +1,41 @@
+<!DOCTYPE html> <!-- [1] -->
+<html lang="en"> <!-- [2] -->
+<head> <!-- [3] -->
+  <meta charset="UTF-8"> <!-- [4] -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- [5] -->
+  <title>Safe Counter + Echo</title> <!-- [6] -->
+  <link rel="stylesheet" href="pro4.css"> <!-- [7] -->
+</head>
+<body> <!-- [8] -->
+  <main class="card"> <!-- [9] -->
+    <h1>DOM Fundamentals (Safely)</h1> <!-- [10] -->
+
+    <section aria-labelledby="counter-title" class="section"> <!-- [11] -->
+      <h2 id="counter-title">Counter</h2> <!-- [12] -->
+      <div class="row"> <!-- [13] -->
+        <button id="dec" type="button">−</button> <!-- [14] -->
+        <output id="count" aria-live="polite">0</output> <!-- [15] -->
+        <button id="inc" type="button">+</button> <!-- [16] -->
+      </div>
+      <div class="row"> <!-- [17] -->
+        <button id="reset" type="button">Reset</button> <!-- [18] -->
+        <button id="theme" type="button" data-theme="light">Toggle Theme</button> <!-- [19] -->
+      </div>
+    </section>
+
+    <section aria-labelledby="echo-title" class="section"> <!-- [20] -->
+      <h2 id="echo-title">Echo (Safely)</h2> <!-- [21] -->
+      <label for="msg">Type anything:</label> <!-- [22] -->
+      <input id="msg" placeholder="Try typing <img onerror=alert(1)>" /> <!-- [23] -->
+      <p>Safe echo: <span id="safe"></span></p> <!-- [24] -->
+      <details> <!-- [25] -->
+        <summary>Show WHY innerHTML is dangerous</summary> <!-- [26] -->
+        <p>Unsafe echo (demonstration): <span id="unsafe"></span></p> <!-- [27] -->
+        <button id="unsafe-toggle" type="button">Render unsafely once</button> <!-- [28] -->
+      </details>
+    </section>
+  </main>
+
+  <script src="pro4.js" defer></script> <!-- [29] -->
+</body>
+</html>
