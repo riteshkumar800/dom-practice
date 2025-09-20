@@ -37,7 +37,7 @@ div{
 0% {
     transform: translate(-50%, -50%);
     opacity: 1;
-    filter: hue-totate(0);
+    filter: hue-rotate(0);
 }    
 100% {
     transform: translate(-50%, -5000%);
